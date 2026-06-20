@@ -1,0 +1,24 @@
+# run.mac
+/run/setCut 0.0001 mm    # 100 nm cut — creates more explicit delta electrons
+/cuts/setLowEdge 100 eV
+
+#Will this secondary electron travel more than 100 nm before stopping?
+#    YES → create it as an explicit tracked particle
+#    NO  → deposit its energy locally as part of the continuous loss of the parent
+
+/run/initialize
+
+# --- PRIMARY BEAM SETTINGS ---
+/gps/particle mu-
+/gps/energy 4000 MeV
+
+/gps/pos/type Plane
+/gps/pos/shape Rectangle
+/gps/pos/centre 11 0 0 mm
+/gps/pos/rot1 0 1 0
+/gps/pos/rot2 0 0 1
+/gps/pos/halfx 314 mm
+/gps/pos/halfy 500 mm
+/gps/direction -1 0 0
+
+/run/beamOn 10
