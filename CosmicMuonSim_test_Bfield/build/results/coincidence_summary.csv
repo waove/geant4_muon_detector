@@ -1,0 +1,36 @@
+# Coincidence summary
+# Discriminator threshold: 0.5 MeV per plate
+# Total events: 200
+#
+class,n_events,rate_per_event
+1fold_any,23,0.115
+2fold_any,0,0
+3fold_any,0,0
+4fold_all,0,0
+#
+# 2-fold pairs
+pair,n_events,rate_per_event
+S0+S1,0,0
+S0+S2,0,0
+S0+S3,0,0
+S1+S2,0,0
+S1+S3,0,0
+S2+S3,0,0
+#
+# Plate efficiency  (trigger = other 3 plates fired)
+plate,n_trigger,n_4fold,efficiency,efficiency_err
+Scint_0,0,0,0,0
+Scint_1,0,0,0,0
+Scint_2,0,0,0,0
+Scint_3,0,0,0,0
+#
+# Mean edep per plate when that plate was in a coincidence
+plate,n_coinc_events,mean_edep_MeV
+Scint_0,0,0
+Scint_1,0,0
+Scint_2,23,2.53261
+Scint_3,0,0
+#
+# All coincidence patterns (bitmask, label, count, rate)
+mask,label,n_events,rate_per_event,n_with_al
+4,S2,23,0.115,0
